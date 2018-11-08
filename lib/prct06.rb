@@ -5,7 +5,7 @@ class Etiqueta
 	def initialize(n, ve, g, gs, h, az, pr, sa, gm, gp, pa, al, fi, vi, mi)
 		
 		@nombre = n
-		#@valor_energ = ve
+		@valor_energ = ve
 		# @grasas = g
 		# @grasas_s = gs
 		# @hidratos = h
