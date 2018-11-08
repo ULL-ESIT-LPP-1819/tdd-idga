@@ -25,4 +25,8 @@ class Etiqueta
 	def calcularkjg
 		37*@grasas+37*@grasas_m+37*@grasas_p+17*@hidratos+10*@poli_alc+17*@almidon+8*@fibra+17*@proteinas+25*@sal
 	end
+
+	def calcularkcg
+		9*@grasas+9*@grasas_m+9*@grasas_p+4*@hidratos+2.4*@poli_alc+4*@almidon+2*@fibra+4*@proteinas+6*@sal
+	end
 end 
