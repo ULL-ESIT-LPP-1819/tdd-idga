@@ -32,5 +32,9 @@ RSpec.describe Prct06 do
 	  it "Valor azucares correcto" do
 		expect(@et.azucares).to eq(5.6)
 	  end
+
+	  it "Valor proteinas correcto" do
+		expect(@et.proteinas).to eq(2)
+	  end
   end
 end
