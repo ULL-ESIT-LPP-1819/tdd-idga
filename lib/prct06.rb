@@ -8,7 +8,7 @@ class Etiqueta
 		@valor_energ = ve
 		@grasas = g
 		@grasas_s = gs
-		# @hidratos = h
+		@hidratos = h
 		# @azucares = az
 		# @proteinas = pr
 		# @sal = sa
