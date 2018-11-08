@@ -65,5 +65,9 @@ RSpec.describe Prct06 do
 	  it "Valor vitaminas correcto" do
 		expect(@et.vitaminas).to eq(7.6)
 	  end
+
+	  it "Valor minerales correcto" do
+		expect(@et.minerales).to eq(3.2)
+	  end
   end
 end
