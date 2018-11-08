@@ -44,5 +44,10 @@ RSpec.describe Prct06 do
 	  it "Valor grasas monoinsaturadas correcto" do
 		expect(@et.grasas_m).to eq (0)
 	  end
+		
+
+	  it "Valor grasas poliinsaturadas correcto" do
+		expect(@et.grasas_p).to eq(0)
+	  end
   end
 end
