@@ -9,7 +9,7 @@ class Etiqueta
 		@grasas = g
 		@grasas_s = gs
 		@hidratos = h
-		# @azucares = az
+		@azucares = az
 		# @proteinas = pr
 		# @sal = sa
 
