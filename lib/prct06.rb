@@ -11,7 +11,7 @@ class Etiqueta
 		@hidratos = h
 		@azucares = az
 		@proteinas = pr
-		# @sal = sa
+		@sal = sa
 
 		# @grasas_m = gm
 		# @grasas_p = gp
