@@ -57,5 +57,9 @@ RSpec.describe Prct06 do
 	  it "Valor almidon correcto" do
 		  expect(@et.almidon).to eq(5)
 	  end
+
+	  it "Valor fibra correcto" do
+		  expect(@et.fibra).to eq(14)
+	  end
   end
 end
