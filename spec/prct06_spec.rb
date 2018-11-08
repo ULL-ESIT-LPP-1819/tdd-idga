@@ -16,5 +16,9 @@ RSpec.describe Prct06 do
 	  it "Valor energético correcto" do
 		expect(@et.valor_energ).to eq(50)
 	  end
+
+	  it "Valor grasas correcto" do
+		expect(@et.grasas).to eq(0)
+	  end
   end
 end
