@@ -19,6 +19,6 @@ class Etiqueta
 		@almidon = al
 		@fibra = fi
 		@vitaminas = vi
-		# @minerales = mi
+		@minerales = mi
 	end
 end 
