@@ -53,5 +53,9 @@ RSpec.describe Prct06 do
 	  it "Valor polialcoholes correcto" do
 		expect(@et.poli_alc).to eq(0)
 	  end
+
+	  it "Valor almidon correcto" do
+		  expect(@et.almidon).to eq(5)
+	  end
   end
 end
