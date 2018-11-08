@@ -4,9 +4,8 @@ RSpec.describe Prct06 do
   end
   
   describe Etiqueta do
-  end
 
-  #it "does something useful" do
-   # expect(false).to eq(true)
-  #:end
+	  before :each do
+		@et = Etiqueta.new("Ejemplo", 50, 0, 23, 3.4, 5.6, 2, 0)
+  	  end
 end
