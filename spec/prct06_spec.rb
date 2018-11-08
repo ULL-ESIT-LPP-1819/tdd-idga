@@ -6,6 +6,7 @@ RSpec.describe Prct06 do
   describe Etiqueta do
 
 	  before :each do
-		@et = Etiqueta.new("Ejemplo", 50, 0, 23, 3.4, 5.6, 2, 0)
+		  @et = Etiqueta.new("Ejemplo", 50, 0, 23, 3.4, 5.6, 2, 0, 0, 0, 0, 5, 14, 7.6, 3.2)
   	  end
+  end
 end
