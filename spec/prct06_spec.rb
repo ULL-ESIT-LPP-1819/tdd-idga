@@ -55,11 +55,15 @@ RSpec.describe Prct06 do
 	  end
 
 	  it "Valor almidon correcto" do
-		  expect(@et.almidon).to eq(5)
+		expect(@et.almidon).to eq(5)
 	  end
 
 	  it "Valor fibra correcto" do
-		  expect(@et.fibra).to eq(14)
+		expect(@et.fibra).to eq(14)
+	  end
+
+	  it "Valor vitaminas correcto" do
+		expect(@et.vitaminas).to eq(7.6)
 	  end
   end
 end
