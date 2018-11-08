@@ -36,5 +36,9 @@ RSpec.describe Prct06 do
 	  it "Valor proteinas correcto" do
 		expect(@et.proteinas).to eq(2)
 	  end
+
+	  it "Valor sal correcto" do
+		expect(@et.sal).to eq(0)
+	  end
   end
 end
