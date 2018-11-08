@@ -6,7 +6,7 @@ class Etiqueta
 		
 		@nombre = n
 		@valor_energ = ve
-		# @grasas = g
+		@grasas = g
 		# @grasas_s = gs
 		# @hidratos = h
 		# @azucares = az
