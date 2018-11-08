@@ -15,7 +15,7 @@ class Etiqueta
 
 		@grasas_m = gm
 		@grasas_p = gp
-		# @poli_alc = pa
+		@poli_alc = pa
 		# @almidon = al
 		# @fibra = fi
 		# @vitaminas = vi
