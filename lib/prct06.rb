@@ -13,7 +13,7 @@ class Etiqueta
 		@proteinas = pr
 		@sal = sa
 
-		# @grasas_m = gm
+		@grasas_m = gm
 		# @grasas_p = gp
 		# @poli_alc = pa
 		# @almidon = al
