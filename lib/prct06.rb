@@ -14,7 +14,7 @@ class Etiqueta
 		@sal = sa
 
 		@grasas_m = gm
-		# @grasas_p = gp
+		@grasas_p = gp
 		# @poli_alc = pa
 		# @almidon = al
 		# @fibra = fi
