@@ -8,6 +8,8 @@ RSpec.describe Prct06 do
 	  before :each do
 		  @et = Etiqueta.new("Ejemplo", 50, 0, 23, 3.4, 5.6, 2, 0, 0, 0, 0, 5, 14, 7.6, 3.2)
   	  end
+	  
+	  ########
 
 	  it "Nombre correcto" do
 		expect(@et.nombre).to eq("Ejemplo")
@@ -69,5 +71,12 @@ RSpec.describe Prct06 do
 	  it "Valor minerales correcto" do
 		expect(@et.minerales).to eq(3.2)
 	  end
+
+	  ########
+	  
+	  it "Calcular kJ/g" do
+		expect(@et.calcularkjg).to eq(4682)
+	  end
+
   end
 end
