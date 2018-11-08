@@ -18,7 +18,7 @@ class Etiqueta
 		@poli_alc = pa
 		@almidon = al
 		@fibra = fi
-		# @vitaminas = vi
+		@vitaminas = vi
 		# @minerales = mi
 	end
 end 
