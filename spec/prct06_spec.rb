@@ -75,7 +75,7 @@ RSpec.describe Prct06 do
 	  ########
 	  
 	  it "Calcular kJ/g" do
-		expect(@et.calcularkjg).to eq(4682)
+		  expect(@et.calcularkjg).to eq(288.8)
 	  end
 
   end

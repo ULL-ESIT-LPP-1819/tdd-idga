@@ -21,4 +21,8 @@ class Etiqueta
 		@vitaminas = vi
 		@minerales = mi
 	end
+	
+	def calcularkjg
+		37*@grasas+37*@grasas_m+37*@grasas_p+17*@hidratos+10*@poli_alc+17*@almidon+8*@fibra+17*@proteinas+25*@sal
+	end
 end 
