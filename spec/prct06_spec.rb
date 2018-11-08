@@ -83,7 +83,7 @@ RSpec.describe Prct06 do
 	  end
 
 	  it "Calcular Ingesta Referencia" do
-		  expect(@et.calcularir(@et.azucares)).to eq(2000)	  
+		  expect(@et.calcularir(@et.azucares)).to eq(4.92091388400703)	  
 	  end
 
   end

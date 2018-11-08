@@ -29,4 +29,9 @@ class Etiqueta
 	def calcularkcg
 		9*@grasas+9*@grasas_m+9*@grasas_p+4*@hidratos+2.4*@poli_alc+4*@almidon+2*@fibra+4*@proteinas+6*@sal
 	end
+
+	def calcularir(ref)
+		total = @valor_energ+@grasas+@grasas_s+@hidratos+@azucares+@proteinas+@sal+@grasas_m+@grasas_p+@poli_alc+@almidon+@fibra+@vitaminas+@minerales
+		(ref*100)/total
+	end
 end 
