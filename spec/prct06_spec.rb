@@ -79,7 +79,11 @@ RSpec.describe Prct06 do
 	  end
 
 	  it "Calcular kcal/g" do
-		  expect(@et.calcularkcg).to eq(69.6)
+		expect(@et.calcularkcg).to eq(69.6)
+	  end
+
+	  it "Calcular Ingesta Referencia" do
+		  expect(@et.calcularir(@et.azucares)).to eq(2000)	  
 	  end
 
   end
