@@ -7,6 +7,11 @@ class List
 		@head = nil
 		@tail = nil
 	end
+	
+	def empty
+		@head.nil?
+	end
+
 
 	def insert(tag)
 		n = Node.new(tag, nil, nil)
