@@ -47,4 +47,19 @@ class List
 			return sw
 		end
 	end
+	
+	# Extracción por la cabeza
+	def shift
+		if self.empty
+			return nil
+		else
+			if @tail == @head
+				@tail = nil
+				@head = nil
+			else   	
+				@head = @head.next
+				return @head 
+			end
+		 end	
+	end
 end
