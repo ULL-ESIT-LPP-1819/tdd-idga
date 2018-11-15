@@ -16,5 +16,10 @@ RSpec.describe Etiqueta do
 		expect(@l.empty).to be false
 	end
 
-
+	it "Shift correcto" do
+		expect(@l.insert(@et1)).equal?(Node)
+		expect(@l.empty).to be false
+	       	expect(@l.pop).equal?(Node)
+	     	expect(@l.empty).to be true
+	end
 end
