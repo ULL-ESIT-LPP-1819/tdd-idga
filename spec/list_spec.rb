@@ -2,10 +2,10 @@ RSpec.describe Etiqueta do
 
 	before :each do
 		@et1 = Etiqueta.new("Platano",110,15,0,0,0,56,4,0,1,9,8,3,1.5,3)
-		@et2 = Etiqueta.new("Gofio",40,30,25,2.3,56,0,0,0,0,0,3,3,4.5,7)
-		@et3 = Etiqueta.new("Higo",80,34,67,0,1,3,2.1,5,6,4,2,1,7.8,0)
-		@et4 = Etiqueta.new("Manzana",67,23,56,0,0,0,0,0,3,3,2,1,7,6.5)
-		@et5 = Etiqueta.new("Pera",32,23.4,5,10,11,4,1.1,5,6,56,32,12,3,0)
+		@et2 = Etiqueta.new("Gofio",40,30,25,2.3,56,0,10,0,0,0,3,3,4.5,7)
+		@et3 = Etiqueta.new("Higo",80,34,67,0,1,3,2,5,6,4,2,1,7.8,0)
+		@et4 = Etiqueta.new("Manzana",67,23,56,0,0,0,7,0,3,3,2,1,7,6.5)
+		@et5 = Etiqueta.new("Pera",32,23.4,5,10,11,4,5,3.4,6,56,32,12,3,0)
 		
 		@l = List.new()
 	end
@@ -51,6 +51,20 @@ RSpec.describe Etiqueta do
 		# Array 0 contiene valores menores que 6
 		expect(array[0].length).to eq(3)
 		# Array 1 contiene valores mayores que 6
-		expect(array[1].length).to eq(3)
+		expect(array[1].length).to eq(2)
+	end
+
+	it "to_s correcto" do
+		 expect(@l.insert(@et1)).equal?(Node)
+		 expect(@l.insert(@et2)).equal?(Node)
+		 expect(@l.insert(@et3)).equal?(Node)
+		 expect(@l.insert(@et4)).equal?(Node)
+		 expect(@l.insert(@et5)).equal?(Node)
+
+		 expect(@l.to_s).equal?(String)
+
+		 expect(@l.size).to eq(5)
+		 expect(@l.pop).equal?(Node)
+		 expect(@l.size).to eq(4)
 	end
 end

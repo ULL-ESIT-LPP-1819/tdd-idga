@@ -75,7 +75,7 @@ class List
 
 	def clasificar
 		
-		resultado = []
+		result = []
 		aux1 = []
 		aux2 = []
 		n = @head
@@ -88,6 +88,15 @@ class List
 			end
 			n = n.next
 		end
-		aux1.concat aux2
+		result.push(aux1)
+		result.push(aux2)
+	end
+
+	def to_s
+		n = @head
+		while !(n.nil?)
+			puts n.value.nombre
+			n = n.next
+		end
 	end
 end
