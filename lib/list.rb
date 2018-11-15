@@ -25,7 +25,7 @@ class List
 		# Si NO está vacía
 		else
 			n.prev = @tail
-			n.next = nill
+			n.next = nil
 			@tail.next = n
 			@tail = n
 		end

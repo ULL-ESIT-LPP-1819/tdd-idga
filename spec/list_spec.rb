@@ -9,7 +9,11 @@ RSpec.describe Etiqueta do
 	end
 
 	it "Inserción correcta" do
+		expect(@l.empty).to be true
 		expect(@l.insert(@et1)).equal?(Node)
+		expect(@l.empty).to be false
+		expect(@l.insert(@et2)).equal?(Node)
+		expect(@l.empty).to be false
 	end
 
 
