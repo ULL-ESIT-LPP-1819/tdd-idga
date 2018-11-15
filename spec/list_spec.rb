@@ -8,5 +8,9 @@ RSpec.describe Etiqueta do
 		@l = List.new()
 	end
 
+	it "Inserción correcta" do
+		expect(@l.insert(@et1)).equal?(Node)
+	end
+
 
 end
