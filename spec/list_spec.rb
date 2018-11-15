@@ -29,4 +29,12 @@ RSpec.describe Etiqueta do
 		expect(@l.shift).equal?(Node)
 		expect(@l.empty).to be true
 	end
+
+	it "Size correcto" do
+		expect(@l.empty).to be true
+		expect(@l.insert(@et1)).equal?(Node)
+		expect(@l.insert(@et2)).equal?(Node)
+		expect(@l.insert(@et3)).equal?(Node)
+		expect(@l.size).to eq(3)
+	end
 end
