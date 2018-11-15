@@ -6,4 +6,10 @@ class List
 		@tail = nil
 	end
 
+	def insert(tag)
+		nodo = Node.new(tag, nil, nil)
+		
+			
+	end
+
 end
