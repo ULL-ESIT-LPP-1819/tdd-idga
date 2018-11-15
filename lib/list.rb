@@ -9,9 +9,21 @@ class List
 	end
 
 	def insert(tag)
-		nodo = Node.new(tag, nil, nil)
+		n = Node.new(tag, nil, nil)
 		
-			
+		# Si la lista está vacía
+		if self.empty
+			n.next = n
+			n.prev = n
+			@head = n
+			@tail = n
+		# Si NO está vacía
+		else
+			n.prev = @tail
+			n.next = nill
+			@tail.next = n
+			@tail = n
+		end
 	end
 
 end
