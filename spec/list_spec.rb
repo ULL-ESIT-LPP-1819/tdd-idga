@@ -51,6 +51,6 @@ RSpec.describe Etiqueta do
 		# Array 0 contiene valores menores que 6
 		expect(array[0].length).to eq(3)
 		# Array 1 contiene valores mayores que 6
-		expect(array[1].length).to eq(2)
+		expect(array[1].length).to eq(3)
 	end
 end

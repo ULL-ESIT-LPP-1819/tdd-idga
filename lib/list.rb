@@ -72,4 +72,22 @@ class List
 		end
 		return sz
 	end
+
+	def clasificar
+		
+		resultado = []
+		aux1 = []
+		aux2 = []
+		n = @head
+		
+		while !(n.nil?)
+			if n.value.sal < 6
+				aux1.push(n)
+			else
+			    	aux2.push(n)
+			end
+			n = n.next
+		end
+		aux1.concat aux2
+	end
 end
