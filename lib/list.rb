@@ -62,4 +62,14 @@ class List
 			end
 		 end	
 	end
+
+	def size
+		sz = 0
+		n = @head
+		while !(n.nil?)
+			n = n.next
+			sz += 1
+		end
+		return sz
+	end
 end
