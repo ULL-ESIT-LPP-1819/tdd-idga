@@ -30,5 +30,21 @@ class List
 			@tail = n
 		end
 	end
-
+	
+	def pop
+		# Si está vacía
+		if @head == nil
+			return nil
+		# Si solo tiene 1 elemento
+		elsif @tail == @head
+			@tail = nil
+			@head = nil
+		# Si tiene más de 1 elemento
+		else
+			sw = @tail
+			@tail = sw.prev
+			@tail.next = nil
+			return sw
+		end
+	end
 end
