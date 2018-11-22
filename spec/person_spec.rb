@@ -19,4 +19,11 @@ RSpec.describe Etiqueta do
 		expect(@person1).to be_a_kind_of(Person)
 		expect(@person1).to be_a_kind_of(Patient)
 	end
+
+	it "Comprobar jerarquia" do
+		expect(@person1.class).to eq(Patient)
+		expect(@person1.class.superclass).to eq(Person)
+		expect(@person1.class.ancestors.include? (Object)).to eq (true)
+		expect(@person1.class.ancestors.include? (BasicObject)).to eq (true)	
+	end
 end
