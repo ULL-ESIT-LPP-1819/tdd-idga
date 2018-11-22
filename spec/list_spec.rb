@@ -7,6 +7,12 @@ RSpec.describe Etiqueta do
 		@et4 = Etiqueta.new("Manzana",67,23,56,0,0,0,7,0,3,3,2,1,7,6.5)
 		@et5 = Etiqueta.new("Pera",32,23.4,5,10,11,4,5,3.4,6,56,32,12,3,0)
 		
+		# @n1 = Node.new(et1,nil,nil)
+		# @n2 = Node.new(et2,nil,nil)
+		# @n3 = Node.new(et3,nil,nil)
+		# @n4 = Node.new(et4,nil,nil)
+		# @n5 = Node.new(et5,nil,nil)
+		
 		@l = List.new()
 	end
 

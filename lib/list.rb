@@ -95,7 +95,7 @@ class List
 	def to_s
 		n = @head
 		while !(n.nil?)
-			puts n.value.nombre
+			# puts n.value.nombre
 			n = n.next
 		end
 	end
