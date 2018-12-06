@@ -1,4 +1,4 @@
-class Data
+class Datos
 
 	attr_reader :altura, :peso, :edad, :sexo, :cintura, :cadera
 	

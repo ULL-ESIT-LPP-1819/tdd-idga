@@ -1,7 +1,13 @@
 require "prct06/version"
 
 class Etiqueta
+
+	include Comparable 
 	attr_accessor :nombre, :valor_energ, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_m, :grasas_p, :poli_alc, :almidon, :fibra, :vitaminas, :minerales
+	def <=> (other)
+		nombre <=> other.nombre
+	end
+
 	def initialize(n, ve, g, gs, h, az, pr, sa, gm, gp, pa, al, fi, vi, mi)
 		
 		@nombre = n

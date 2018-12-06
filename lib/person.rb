@@ -1,8 +1,13 @@
 class Person
 	attr_accessor :name
+	include Comparable
 
 	def initialize(n)
 		@name = n
+	end
+
+	def <=>(other)
+		self.name <=> other.name
 	end
 
 	def to_s
@@ -14,9 +19,9 @@ class Patient < Person
 
 	attr_accessor :data
 
-	def initialize(n,d)
+	def initialize(n,data)
 		@name = n
-		@data = d
+		@data = data
 	end
 
 	def get_data

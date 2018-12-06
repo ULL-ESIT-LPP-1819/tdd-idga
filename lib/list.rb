@@ -2,6 +2,7 @@ Node = Struct.new(:value, :next, :prev)
 
 class List
 	attr_accessor :head, :tail
+	include Comparable,Enumerable
 
 	def initialize()
 		@head = nil
@@ -98,5 +99,34 @@ class List
 			# puts n.value.nombre
 			n = n.next
 		end
+	end
+
+	def clasificar_imc
+
+		resultado = []
+		aux1 = []
+		aux2= []
+		n = @head
+		
+		while !(n.nil?)
+			if n.value.data.imc < 30
+				aux1.push(n.value.data.imc)
+			else
+				aux2.push(n.value.data.imc)
+			end
+			n=n.next
+		end
+	        resultado.push(aux1, aux2)
+	end
+	
+	def clasificar_h
+		lista = []
+		n = @head
+		
+		while(!n.nil?)
+			lista.push(n.value.hidratos)
+			n = n.next
+		end
+		return lista
 	end
 end

@@ -7,6 +7,11 @@ RSpec.describe Etiqueta do
 		@et4 = Etiqueta.new("Manzana",67,23,56,0,0,0,7,0,3,3,2,1,7,6.5)
 		@et5 = Etiqueta.new("Pera",32,23.4,5,10,11,4,5,3.4,6,56,32,12,3,0)
 		
+		@d1 = Datos.new(180,80,16,1,110,90)
+		@d2 = Datos.new(165,45,16,0,100,110)
+		@d3 = Datos.new(179,80,31,1,134,143)
+		@d4 = Datos.new(164,178,45,0,100,90)
+
 		# @n1 = Node.new(et1,nil,nil)
 		# @n2 = Node.new(et2,nil,nil)
 		# @n3 = Node.new(et3,nil,nil)
@@ -80,10 +85,23 @@ RSpec.describe Etiqueta do
 		@l.insert(@et3)
 		@l.insert(@et4)
 		@l.insert(@et5)
-		expect(@l.clasificar_imc.select { |i| i.even?}).to eq([4, 2])
-		#expect(@l.clasificar_imc.min).to eq(1)
-		#expect(@l.clasificar_imc.max).to eq(5)
-		#expect(@l.clasificar_imc.sort).to eq([1, 2, 3, 4, 5])
-		#expect(@l.clasificar_imc.collect {|i| (i*i).round(2) }).to eq([1, 9, 25, 16, 4])
+		expect(@l.clasificar_h.select {|i|}).to eq([])
+		expect(@l.clasificar_h.min).to eq(0)
+		expect(@l.clasificar_h.max).to eq(10)
+		expect(@l.clasificar_h.sort).to eq([0, 0, 0, 2.3, 10])
+		expect(@l.clasificar_h.collect {|i| (i*i).round(2) }).to eq([0.0, 5.29, 0.0, 0.0, 100.0])
+	end
+
+	it "[Lista] Prueba 2" do
+		@l.insert(@d1)
+		@l.insert(@d2)
+		@l.insert(@d3)
+		@l.insert(@d4)	
+		
+		expect(@l.clasificar_peso.select { |num| num > 80.0 }).to eq([82.2, 82.3])
+		expect(@l.clasificar_peso.sort).to eq([20.5, 27.8, 35.0, 82.2, 82.3])
+		expect(@l.clasificar_peso.collect {|i| i.round(2) }).to eq([27.8, 20.5, 35.0, 82.2, 82.3])
+		expect(@l.clasificar_peso.min).to eq(20.5)
+		expect(@l.clasificar_peso.max).to eq(82.3)
 	end
 end
