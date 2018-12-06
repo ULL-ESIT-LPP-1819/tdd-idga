@@ -73,4 +73,17 @@ RSpec.describe Etiqueta do
 		 expect(@l.pop).equal?(Node)
 		 expect(@l.size).to eq(4)
 	end
+
+	it "[Lista] Prueba 1" do
+		@l.insert(@et1)
+		@l.insert(@et2)
+		@l.insert(@et3)
+		@l.insert(@et4)
+		@l.insert(@et5)
+		expect(@l.clasificar_imc.select { |i| i.even?}).to eq([4, 2])
+		#expect(@l.clasificar_imc.min).to eq(1)
+		#expect(@l.clasificar_imc.max).to eq(5)
+		#expect(@l.clasificar_imc.sort).to eq([1, 2, 3, 4, 5])
+		#expect(@l.clasificar_imc.collect {|i| (i*i).round(2) }).to eq([1, 9, 25, 16, 4])
+	end
 end
