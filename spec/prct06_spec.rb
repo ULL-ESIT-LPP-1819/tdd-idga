@@ -7,7 +7,10 @@ RSpec.describe Prct06 do
 
 	  before :each do
 		  @et = Etiqueta.new("Ejemplo", 50, 0, 23, 3.4, 5.6, 2, 0, 0, 0, 0, 5, 14, 7.6, 3.2)
-  	  end
+  	  	  @et2 = Etiqueta.new("Ejemplo2",40,20,1,18,1,4,5,6,7,8,2,3,3.4,0)
+		  @et3 = Etiqueta.new("Ejemplo3",10,4,5,2,0,0,0,0,1,3,4,2,5,4)
+		  @et4 = Etiqueta.new("Ejemplo4",50,0,23,3.4,5.6,2,0,0,0,0,5,14,7.6,3.2)
+	  end
 	  
 	  ########
 
@@ -92,5 +95,30 @@ RSpec.describe Prct06 do
 		  expect(@et.mostrar).to eq(nil)
 	  end
 
+	  ### Pruebas de comparación ###
+	  
+	  it "[Etiqueta] <" do
+		expect(@et3 < @et).to be true
+	  end
+
+	  it "[Etiqueta] <=" do
+		expect(@et3 <= @et).to be true
+	  end
+
+	  it "[Etiqueta] ==" do
+		expect(@et == @et4).to be false
+	  end
+
+	  it "[Etiqueta] >" do
+		expect(@et > @et3).to be false
+	  end
+
+	  it "[Etiqueta] >=" do
+		expect(@et >= @et3).to be false
+	  end
+
+	  it "[Etiqueta] Between" do
+		expect(@et3.between?(@et2, @et4)).to be true
+	  end
   end
 end
