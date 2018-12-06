@@ -42,11 +42,11 @@ RSpec.describe Etiqueta do
 	### Pruebas comparación Persona ###
 	
 	it "[Persona] <" do
-		expect(@person1 < @person2).to be true
+		expect(@person1 < @person2).to be false
       	end
 
   	it "[Persona] <=" do
-    		expect(@person1 <= @person2).to be true
+    		expect(@person1 <= @person2).to be false
     	end
 
     	it "[Persona] ==" do
@@ -58,7 +58,7 @@ RSpec.describe Etiqueta do
         end
 
   	it "[Persona] >=" do
-    		expect(@person1 >= @person4).to be false
+    		expect(@person1 >= @person4).to be true
     	end
 
     	it "[Persona] Between" do
