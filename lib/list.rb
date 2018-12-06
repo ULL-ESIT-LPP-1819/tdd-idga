@@ -1,19 +1,24 @@
 Node = Struct.new(:value, :next, :prev)
 
 class List
+	
 	attr_accessor :head, :tail
+	
+	# Inclusión de los módulos Comparable y Enumerable
 	include Comparable,Enumerable
-
+	
+	# Constructor
 	def initialize()
 		@head = nil
 		@tail = nil
 	end
 	
+	# Méotod para saber si la lista está vacía
 	def empty
 		@head.nil?
 	end
 
-
+	# Método para insertar en la lista
 	def insert(tag)
 		n = Node.new(tag, nil, nil)
 		
@@ -32,6 +37,7 @@ class List
 		end
 	end
 	
+	# Método para extraer de la lista
 	def pop
 		# Si está vacía
 		if @head == nil
@@ -63,7 +69,8 @@ class List
 			end
 		 end	
 	end
-
+	
+	# Método para obtener el tamaño de la lista
 	def size
 		sz = 0
 		n = @head
@@ -73,7 +80,8 @@ class List
 		end
 		return sz
 	end
-
+	
+	# Método para clasificar en función de la cantidad de sal
 	def clasificar
 		
 		result = []
@@ -92,7 +100,8 @@ class List
 		result.push(aux1)
 		result.push(aux2)
 	end
-
+	
+	# Método to_s
 	def to_s
 		n = @head
 		while !(n.nil?)
@@ -100,7 +109,8 @@ class List
 			n = n.next
 		end
 	end
-
+	
+	# Método para clasificar en función del IMC
 	def clasificar_imc
 
 		resultado = []
@@ -119,13 +129,28 @@ class List
 	        resultado.push(aux1, aux2)
 	end
 	
+	# Método para clasificar en función de los hidratos
 	def clasificar_h
+		
 		lista = []
 		n = @head
 		
 		while(!n.nil?)
 			lista.push(n.value.hidratos)
 			n = n.next
+		end
+		return lista
+	end
+	
+	# Método para clasificar en funcion del peso
+	def clasificar_peso
+		
+		lista=[]
+		n=@head
+
+		while(!n.nil?)
+			lista.push(n.value.imc.round(1))
+			n=n.next
 		end
 		return lista
 	end

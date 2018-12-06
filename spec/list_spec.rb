@@ -20,7 +20,8 @@ RSpec.describe Etiqueta do
 		
 		@l = List.new()
 	end
-
+	
+	# Prueba de inserción
 	it "Inserción correcta" do
 		expect(@l.empty).to be true
 		expect(@l.insert(@et1)).equal?(Node)
@@ -28,21 +29,24 @@ RSpec.describe Etiqueta do
 		expect(@l.insert(@et2)).equal?(Node)
 		expect(@l.empty).to be false
 	end
-
+	
+	# Prueba de extracción
 	it "Pop correcto" do
 		expect(@l.insert(@et1)).equal?(Node)
 		expect(@l.empty).to be false
 	       	expect(@l.pop).equal?(Node)
 	     	expect(@l.empty).to be true
 	end
-
+	
+	# Prueba de extracción por la cabeza
 	it "Shift correcto" do
 		expect(@l.insert(@et1)).equal?(Node)
 		expect(@l.empty).to be false
 		expect(@l.shift).equal?(Node)
 		expect(@l.empty).to be true
 	end
-
+	
+	# Prueba de tamaño
 	it "Size correcto" do
 		expect(@l.empty).to be true
 		expect(@l.insert(@et1)).equal?(Node)
@@ -51,6 +55,7 @@ RSpec.describe Etiqueta do
 		expect(@l.size).to eq(3)
 	end
 	
+	# Prueba de clasificación
 	it "Clasificar correcto" do
 		expect(@l.insert(@et1)).equal?(Node)
 		expect(@l.insert(@et2)).equal?(Node)
@@ -64,7 +69,8 @@ RSpec.describe Etiqueta do
 		# Array 1 contiene valores mayores que 6
 		expect(array[1].length).to eq(2)
 	end
-
+	
+	# Prueba to_s
 	it "to_s correcto" do
 		 expect(@l.insert(@et1)).equal?(Node)
 		 expect(@l.insert(@et2)).equal?(Node)
@@ -78,7 +84,8 @@ RSpec.describe Etiqueta do
 		 expect(@l.pop).equal?(Node)
 		 expect(@l.size).to eq(4)
 	end
-
+	
+	# Prueba 1 Lista
 	it "[Lista] Prueba 1" do
 		@l.insert(@et1)
 		@l.insert(@et2)
@@ -91,7 +98,8 @@ RSpec.describe Etiqueta do
 		expect(@l.clasificar_h.sort).to eq([0, 0, 0, 2.3, 10])
 		expect(@l.clasificar_h.collect {|i| (i*i).round(2) }).to eq([0.0, 5.29, 0.0, 0.0, 100.0])
 	end
-
+	
+	# Prueba 2 Lista
 	it "[Lista] Prueba 2" do
 		@l.insert(@d1)
 		@l.insert(@d2)

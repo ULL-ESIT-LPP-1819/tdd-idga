@@ -2,6 +2,7 @@ class Datos
 
 	attr_reader :altura, :peso, :edad, :sexo, :cintura, :cadera
 	
+	# Constructor
 	def initialize(altura, peso, edad, sexo, cintura, cadera)
 		@altura = altura
 	        @peso = peso
@@ -10,12 +11,13 @@ class Datos
 		@cintura = cintura
 		@cadera = cadera
 	end
-
+	
+	# Método para calcular el IMC
 	def imc
 		(peso/(altura**2))*10**4
 	end
 
-
+	# Método que muestra los resultados
 	def resultado
 		x=self.imc.round(1)
 
@@ -33,7 +35,8 @@ class Datos
 	        	return "Obesidad grado 3"
 		end
 	end
-
+	
+	# Método que calcula la grasa
 	def grasa_c
 	
 		if @sexo == 0
@@ -43,7 +46,7 @@ class Datos
 		end
 	end
 			  
-
+	# Método que calcula el RCC
 	def rcc
 		
 		x=cintura/cadera

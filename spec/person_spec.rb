@@ -14,19 +14,22 @@ RSpec.describe Etiqueta do
 
 		@l = List.new()	
 	end
-
+	
+	# Prueba de identidad (clase)
 	it "Comprobar la clase del objeto" do
 		expect(@person1).to be_a_kind_of(Person)
 		expect(@person1).to be_a_kind_of(Patient)
 	end
 
+	# Prueba de identidad (jerarquia)
 	it "Comprobar jerarquia" do
 		expect(@person1.class).to eq(Patient)
 		expect(@person1.class.superclass).to eq(Person)
 		expect(@person1.class.ancestors.include? (Object)).to eq (true)
 		expect(@person1.class.ancestors.include? (BasicObject)).to eq (true)	
 	end
-
+	
+	# Prueba de clasificación
 	it "Comprobar clasificación" do
 		expect(@l.insert(@person1)).equal?(Node)
 		expect(@l.insert(@person2)).equal?(Node)
