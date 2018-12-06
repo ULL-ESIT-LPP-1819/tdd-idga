@@ -98,11 +98,11 @@ RSpec.describe Prct06 do
 	  ### Pruebas de comparación ###
 	  
 	  it "[Etiqueta] <" do
-		expect(@et3 < @et).to be true
+		expect(@et3 < @et).to be false
 	  end
 
 	  it "[Etiqueta] <=" do
-		expect(@et3 <= @et).to be true
+		expect(@et3 <= @et).to be false
 	  end
 
 	  it "[Etiqueta] ==" do
