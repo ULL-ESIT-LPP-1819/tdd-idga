@@ -98,10 +98,10 @@ RSpec.describe Etiqueta do
 		@l.insert(@d3)
 		@l.insert(@d4)	
 		
-		expect(@l.clasificar_peso.select { |num| num > 80.0 }).to eq([82.2, 82.3])
-		expect(@l.clasificar_peso.sort).to eq([20.5, 27.8, 35.0, 82.2, 82.3])
-		expect(@l.clasificar_peso.collect {|i| i.round(2) }).to eq([27.8, 20.5, 35.0, 82.2, 82.3])
-		expect(@l.clasificar_peso.min).to eq(20.5)
-		expect(@l.clasificar_peso.max).to eq(82.3)
+		expect(@l.clasificar_peso.select { |i| i > 40.0 }).to eq([])
+		expect(@l.clasificar_peso.sort).to eq([0.0,0.0,0.0,0.0])
+		expect(@l.clasificar_peso.collect {|i| i.round(2) }).to eq([0.0,0.0,0.0,0.0])
+		expect(@l.clasificar_peso.min).to eq(0.0)
+		expect(@l.clasificar_peso.max).to eq(0.0)
 	end
 end
