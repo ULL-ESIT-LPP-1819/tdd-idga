@@ -50,11 +50,11 @@ RSpec.describe Etiqueta do
 
 	it "Comprobación de funciones" do
 
-		expect(@ind1.peso_teorico_ideal).to eq(0)
-		expect(@ind2.gasto_energetico_basal).to eq(0)
-		expect(@ind3.efecto_termogeno).to eq(0)
-		expect(@ind4.factor_actividad).to eq(0)
-		expect(@ind5.gasto_actividad_fisica).to eq(0)
-		expect(@ind1.gasto_energetico_total).to eq(0)
+		expect(@ind1.peso_teorico_ideal).to eq(65.0)
+		expect(@ind2.gasto_energetico_basal).to eq(1505.0)
+		expect(@ind3.efecto_termogeno).to eq(170.65)
+		expect(@ind4.factor_actividad).to eq(0.0)
+		expect(@ind5.gasto_actividad_fisica).to eq(0.0)
+		expect(@ind1.gasto_energetico_total).to eq(2587.1)
 	end
 end
