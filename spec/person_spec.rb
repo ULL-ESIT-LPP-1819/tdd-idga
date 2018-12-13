@@ -3,11 +3,11 @@ RSpec.describe Etiqueta do
 	before :each do
 
 		# Ejemplos para la lista
-		@person1 = Patient.new("Pepito", Datos.new(175,70,15,1,100,110))
-		@person2 = Patient.new("Marco", Datos.new(168,60,19,1,98,100))
-		@person3 = Patient.new("Mario", Datos.new(168,60,19,1,98,100))
-		@person4 = Patient.new("Lucia", Datos.new(180,67,21,0,96,100))
-		@person5 = Patient.new("Manolo", Datos.new(178,80,16,1,90,80))
+		@person1 = Patient.new("Pepito", Datos.new(175,70,15,1,100,110,"a"))
+		@person2 = Patient.new("Marco", Datos.new(168,60,19,1,98,100,"b"))
+		@person3 = Patient.new("Mario", Datos.new(168,60,19,1,98,100,"c"))
+		@person4 = Patient.new("Lucia", Datos.new(180,67,21,0,96,100,"d"))
+		@person5 = Patient.new("Manolo", Datos.new(178,80,16,1,90,80,"e"))
 
 		# Persona que no es paciente
 		@person6 = Person.new("Juan")
