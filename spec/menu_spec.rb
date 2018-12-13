@@ -21,31 +21,85 @@ RSpec.describe Etiqueta do
 		@menu4 = List.new
 		@menu5 = List.new
 
+		@lve1 = List.new
+		@lve2 = List.new
+		@lve3 = List.new
+		@lve4 = List.new
+		@lve5 = List.new
+
 	end
 
-	it "Creación de menu's" do
-
+	it "Pruebas menu's" do
+		
+		### Individuo 1 ###
+		
 		@menu1.insert(@entrante)
 		@menu1.insert(@principal1)
 		@menu1.insert(@postre1)
+		
+		@lve1.insert(@entrante.valor_energ)
+		@lve1.insert(@principal1.valor_energ)
+		@lve1.insert(@postre1.valor_energ)
 
+		# Sumatorio de los valores energético
+		ve_total = @lve1.reduce(:+)
+		
+		# Calculo de la idoneidad del menu
+		expect(ve_total.between?(@ind1.gasto_energetico_total*0.90, @ind1.gasto_energetico_total*1.10)).to be false
+
+		### Individuo 2 ###
+		
 		@menu2.insert(@entrante)
 		@menu2.insert(@principal2)
 		@menu2.insert(@postre1)
+		
+		@lve2.insert(@entrante.valor_energ)
+		@lve2.insert(@principal2.valor_energ)
+		@lve2.insert(@postre1.valor_energ)
 
+		ve_total = @lve2.reduce(:+)
+		expect(ve_total.between?(@ind2.gasto_energetico_total*0.90, @ind2.gasto_energetico_total*1.10)).to be false
+		
+		### Individuo 3 ###
+		
 		@menu3.insert(@entrante)
 		@menu3.insert(@principal3)
 		@menu3.insert(@postre1)
 
+		@lve3.insert(@entrante.valor_energ)
+		@lve3.insert(@principal3.valor_energ)
+		@lve3.insert(@postre1.valor_energ)
+		
+		ve_total = @lve3.reduce(:+)
+		expect(ve_total.between?(@ind3.gasto_energetico_total*0.90, @ind3.gasto_energetico_total*1.10)).to be false
+		
+		expect(@menu3.collect {|x|}).to eq([nil,nil,nil,nil])
+
+		### Individuo 4 ###
+
 		@menu4.insert(@entrante)
 		@menu4.insert(@principal1)
 		@menu4.insert(@postre2)
+		
+		@lve4.insert(@entrante.valor_energ)
+		@lve4.insert(@principal1.valor_energ)
+		@lve4.insert(@postre2.valor_energ)
+
+		ve_total = @lve4.reduce(:+)
+		expect(ve_total.between?(@ind4.gasto_energetico_total*0.90, @ind4.gasto_energetico_total*1.10)).to be false
+		
+		### Individuo 5 ###
 
 		@menu5.insert(@entrante)
 		@menu5.insert(@principal2)
 		@menu5.insert(@postre2)
-
-		expect(@menu3.collect {|x|}).to eq([nil,nil,nil,nil])
+		
+		@lve5.insert(@entrante.valor_energ)
+		@lve5.insert(@principal2.valor_energ)
+		@lve5.insert(@postre2.valor_energ)
+		
+		ve_total = @lve5.reduce(:+)
+		expect(ve_total.between?(@ind5.gasto_energetico_total*0.90, @ind5.gasto_energetico_total*1.10)).to be false
 	end	
 
 	it "Comprobación de funciones" do
