@@ -150,8 +150,19 @@ class List
 
 		while(!n.nil?)
 			lista.push(n.value.imc.round(1))
-			n=n.next
+	
+		n=n.next
 		end
 		return lista
+	end
+
+	def each 
+		
+		yield @head.value
+		n = @head
+		while(!n.nil?)
+			yield n.value
+			n=n.next
+		end
 	end
 end

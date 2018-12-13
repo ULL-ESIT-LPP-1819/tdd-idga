@@ -1,15 +1,16 @@
 class Datos
 
-	attr_reader :altura, :peso, :edad, :sexo, :cintura, :cadera
+	attr_reader :altura, :peso, :edad, :sexo, :cintura, :cadera, :n_a
 	
 	# Constructor
-	def initialize(altura, peso, edad, sexo, cintura, cadera)
+	def initialize(altura, peso, edad, sexo, cintura, cadera, n_a)
 		@altura = altura
 	        @peso = peso
 		@edad = edad
 		@sexo = sexo
 		@cintura = cintura
 		@cadera = cadera
+		@n_a = n_a
 	end
 	
 	# Método para calcular el IMC
