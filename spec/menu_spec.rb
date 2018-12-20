@@ -20,6 +20,14 @@ RSpec.describe Etiqueta do
 		@menu3 = List.new
 		@menu4 = List.new
 		@menu5 = List.new
+		@menu6 = List.new
+		@menu7 = List.new
+		@menu8 = List.new
+		@menu9 = List.new
+		@menu10 = List.new
+
+		@arraymenus = []
+		@listind = List.new
 
 		@lve1 = List.new
 		@lve2 = List.new
@@ -100,6 +108,11 @@ RSpec.describe Etiqueta do
 		
 		ve_total = @lve5.reduce(:+)
 		expect(ve_total.between?(@ind5.gasto_energetico_total*0.90, @ind5.gasto_energetico_total*1.10)).to be false
+	
+		### Uso del método zip ###
+		
+		[@entrante,@principal3,@postre2].zip(@lve1)
+	
 	end	
 
 	it "Comprobación de funciones" do
@@ -110,5 +123,100 @@ RSpec.describe Etiqueta do
 		expect(@ind4.factor_actividad).to eq(0.0)
 		expect(@ind5.gasto_actividad_fisica).to eq(0.0)
 		expect(@ind1.gasto_energetico_total).to eq(2587.1)
+	end
+
+	it "Prueba array de menus" do
+		
+		@menu1.insert(@entrante)
+		@menu1.insert(@principal1)
+		@menu1.insert(@postre)
+
+		@arraymenus.push(@menu1)
+
+		#####
+
+		@menu2.insert(@entrante)
+		@menu2.insert(@principal2)
+		@menu2.insert(@postre1)
+
+		@arraymenus.push(@menu2)
+		
+		#####
+
+		@menu3.insert(@entrante)
+		@menu3.insert(@principal3)
+		@menu3.insert(@postre1)
+
+		@arraymenus.push(@menu3)
+		
+		####
+
+		@menu4.insert(@entrante)
+		@menu4.insert(@principal1)
+		@menu4.insert(@postre2)
+
+		@arraymenus.push(@menu4)
+
+		####
+		
+		@menu5.insert(@entrante)
+		@menu5.insert(@principal2)
+		@menu5.insert(@postre2)
+
+		@arraymenus.push(@menu5)
+
+		####
+		
+		@menu6.insert(@entrante)
+		@menu6.insert(@principal3)
+		@menu6.insert(@postre2)
+
+		@arraymenus.push(@menu6)
+
+		####
+   		
+		@menu7.insert(@entrante)
+		@menu7.insert(@principal1)
+		@menu7.insert(@postre2)
+
+		@arraymenus.push(@menu7)
+
+		####
+
+		@menu8.insert(@entrante)
+		@menu8.insert(@principal2)
+		@menu8.insert(@postre1)
+		
+		@arraymenus.push(@menu8)
+		
+		####
+
+		@menu9.insert(@entrante)
+		@menu9.insert(@principal3)
+		@menu9.insert(@postre2)
+
+		@arraymenus.push(@menu9)
+		
+		####
+
+		@menu10.insert(@entrante)
+		@menu10.insert(@principal2)
+		@menu10.insert(@postre2)
+	        
+		@arraymenus.push(@menu10)
+	end
+
+	it "Prueba lista individuos" do
+
+		@listind.insert(@ind1)
+		@listind.insert(@ind2)
+		@listind.insert(@ind3)
+		@listind.insert(@ind4)
+		@listind.insert(@ind5)
+		@listind.insert(@ind1)
+		@listind.insert(@ind2)
+		@listind.insert(@ind3)
+		@listind.insert(@ind4)
+		@listind.insert(@ind5)
 	end
 end
