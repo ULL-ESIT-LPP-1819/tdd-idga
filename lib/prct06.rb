@@ -11,6 +11,10 @@ class Etiqueta
 		nombre <=> other.nombre
 	end
 	
+	def +(other)
+		calcularkcg + other.calcularkcg
+	end
+		
 	#Constructor
 	def initialize(n, ve, g, gs, h, az, pr, sa, gm, gp, pa, al, fi, vi, mi)
 		
