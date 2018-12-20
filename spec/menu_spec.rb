@@ -130,8 +130,8 @@ RSpec.describe Etiqueta do
 		@menu1.insert(@entrante)
 		@menu1.insert(@principal1)
 		@menu1.insert(@postre)
-
-		@arraymenus.push(@menu1)
+	
+		@arraymenus.push(@menu1.reduce(0){ |sum, x| sum+x.calcularkcg})
 
 		#####
 
@@ -139,7 +139,7 @@ RSpec.describe Etiqueta do
 		@menu2.insert(@principal2)
 		@menu2.insert(@postre1)
 
-		@arraymenus.push(@menu2)
+		@arraymenus.push(@menu2.reduce(0){ |sum, x| sum+x.calcularkcg})
 		
 		#####
 
@@ -147,7 +147,7 @@ RSpec.describe Etiqueta do
 		@menu3.insert(@principal3)
 		@menu3.insert(@postre1)
 
-		@arraymenus.push(@menu3)
+		@arraymenus.push(@menu3.reduce(0){ |sum, x| sum+x.calcularkcg})
 		
 		####
 
@@ -155,7 +155,7 @@ RSpec.describe Etiqueta do
 		@menu4.insert(@principal1)
 		@menu4.insert(@postre2)
 
-		@arraymenus.push(@menu4)
+		@arraymenus.push(@menu4.reduce(0){ |sum, x| sum+x.calcularkcg})
 
 		####
 		
@@ -163,7 +163,7 @@ RSpec.describe Etiqueta do
 		@menu5.insert(@principal2)
 		@menu5.insert(@postre2)
 
-		@arraymenus.push(@menu5)
+		@arraymenus.push(@menu5.reduce(0){ |sum, x| sum+x.calcularkcg})
 
 		####
 		
@@ -171,7 +171,7 @@ RSpec.describe Etiqueta do
 		@menu6.insert(@principal3)
 		@menu6.insert(@postre2)
 
-		@arraymenus.push(@menu6)
+		@arraymenus.push(@menu6.reduce(0){ |sum, x| sum+x.calcularkcg})
 
 		####
    		
@@ -179,7 +179,7 @@ RSpec.describe Etiqueta do
 		@menu7.insert(@principal1)
 		@menu7.insert(@postre2)
 
-		@arraymenus.push(@menu7)
+		@arraymenus.push(@menu7.reduce(0){ |sum, x| sum+x.calcularkcg})
 
 		####
 
@@ -187,7 +187,7 @@ RSpec.describe Etiqueta do
 		@menu8.insert(@principal2)
 		@menu8.insert(@postre1)
 		
-		@arraymenus.push(@menu8)
+		@arraymenus.push(@menu8.reduce(0){ |sum, x| sum+x.calcularkcg})
 		
 		####
 
@@ -195,7 +195,7 @@ RSpec.describe Etiqueta do
 		@menu9.insert(@principal3)
 		@menu9.insert(@postre2)
 
-		@arraymenus.push(@menu9)
+		@arraymenus.push(@menu9.reduce(0){ |sum, x| sum+x.calcularkcg})
 		
 		####
 
@@ -203,7 +203,13 @@ RSpec.describe Etiqueta do
 		@menu10.insert(@principal2)
 		@menu10.insert(@postre2)
 	        
-		@arraymenus.push(@menu10)
+		@arraymenus.push(@menu10.reduce(0){ |sum, x| sum+x.calcularkcg})
+
+		### Pruebas de ordenacion ###
+		
+		expect(@arraymenus.sort_for).to eq([])
+		expect(@arraymenus.sort_each).to eq([])
+		expect(@arraymenus.sort).to eq([])
 	end
 
 	it "Prueba lista individuos" do
@@ -218,5 +224,12 @@ RSpec.describe Etiqueta do
 		@listind.insert(@ind3)
 		@listind.insert(@ind4)
 		@listind.insert(@ind5)
+	end
+
+	it "Prueba ordenar lista" do
+		
+		#expect(@arraymenus.sort).to eq([a,b,c])
+		#expect(@arraymenus.sort_for).to eq([a,b,c])
+		#expect(@arraymenus.map{ |x| x.gasto_energetico_total}.sort ).to eq([a,b,c])
 	end
 end

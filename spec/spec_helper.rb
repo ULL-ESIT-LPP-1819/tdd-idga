@@ -3,6 +3,10 @@ require "prct06"
 require "list"
 require "person"
 require "data"
+require "array"
+require 'coveralls'
+
+Coverall.wear!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
