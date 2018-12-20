@@ -208,8 +208,18 @@ RSpec.describe Etiqueta do
 		### Pruebas de ordenacion ###
 		
 		expect(@arraymenus.sort_for).to eq([])
-		expect(@arraymenus.sort_each).to eq([])
+		#expect(@arraymenus.sort_each).to eq([])
 		expect(@arraymenus.sort).to eq([])
+
+		puts Benchmark.measure{
+			      expect(@arraymenus.sort_for).to eq([])
+		}
+		#puts Benchmark.measure {
+		#	      expect(@arraymenus.sort_each).to eq([])
+		#}
+		puts Benchmark.measure {
+			      expect(@arraymenus.sort).to eq([])
+		}
 	end
 
 	it "Prueba lista individuos" do
@@ -224,12 +234,28 @@ RSpec.describe Etiqueta do
 		@listind.insert(@ind3)
 		@listind.insert(@ind4)
 		@listind.insert(@ind5)
+
+		### Pruebas de ordenacion ###
+		
+		expect(@listind.sort_for).to eq([])
+		expect(@listind.sort_each).to eq([])
+		expect(@listind.sort).to eq([])
+		
+		puts Benchmark.measure{
+			expect(@listind.sort_for).to eq([])
+		}
+		#puts Benchmark.measure{
+		#	expect(@listind.sort_each.to eq([])
+		#}
+		puts Benchmark.measure{
+			expect(@listind.sort).to eq([])
+		}
 	end
 
 	it "Prueba ordenar lista" do
-		
-		#expect(@arraymenus.sort).to eq([a,b,c])
-		#expect(@arraymenus.sort_for).to eq([a,b,c])
-		#expect(@arraymenus.map{ |x| x.gasto_energetico_total}.sort ).to eq([a,b,c])
+			
+		expect(@arraymenus.sort_for).to eq([a,b,c])
+		#expect(@arraymenus.sort_each).to eq([a,b,c])
+		expect(@arraymenus.sort).to eq([a,b,c])
 	end
 end

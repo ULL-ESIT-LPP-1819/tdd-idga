@@ -5,8 +5,9 @@ require "person"
 require "data"
 require "array"
 require 'coveralls'
+require 'benchmark'
 
-Coverall.wear!
+Coveralls.wear!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
