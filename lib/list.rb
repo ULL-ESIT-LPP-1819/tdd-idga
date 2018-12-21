@@ -165,4 +165,18 @@ class List
 			n=n.next
 		end
 	end
+
+	def sort_for
+		
+		@list = self.map{ |a| a }
+		
+		for i in (0..@list.count-1)
+			for j in (0..@list.count-1)
+				if j+1 != @list.count 
+					if @list[j+1] < @list[j]
+						@list[j],@list[j+1] = @list[j+1],@list[j]															end
+				end
+			end
+		end
+	end
 end

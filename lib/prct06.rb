@@ -8,7 +8,7 @@ class Etiqueta
 	attr_accessor :nombre, :valor_energ, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_m, :grasas_p, :poli_alc, :almidon, :fibra, :vitaminas, :minerales
 	
 	def <=> (other)
-		nombre <=> other.nombre
+		valor_energ <=> other.valor_energ && self.calcularkcg<=>other.calcularkcg
 	end
 	
 	def +(other)
